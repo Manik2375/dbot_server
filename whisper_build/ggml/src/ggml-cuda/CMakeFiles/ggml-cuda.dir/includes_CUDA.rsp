@@ -1,0 +1,1 @@
+-I"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/.." -I"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include" -isystem "/usr/local/cuda/targets/sbsa-linux/include"

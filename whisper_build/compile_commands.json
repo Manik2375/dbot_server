@@ -1,0 +1,980 @@
+[
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -o CMakeFiles/ggml-base.dir/ggml.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-base.dir/ggml.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -o CMakeFiles/ggml-base.dir/ggml-alloc.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-alloc.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-alloc.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-alloc.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-base.dir/ggml-backend.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-backend.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-backend.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-backend.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-base.dir/ggml-opt.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-opt.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-opt.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-opt.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-base.dir/ggml-threading.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-threading.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-threading.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-threading.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -o CMakeFiles/ggml-base.dir/ggml-quants.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-quants.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-quants.c",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BUILD -DGGML_COMMIT=\\\"f53dc748\\\" -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_VERSION=\\\"0.9.5\\\" -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_base_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml-base.dir/gguf.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/gguf.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/gguf.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-base.dir/gguf.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ggml-cpu.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/repack.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/repack.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/repack.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/hbm.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/hbm.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/hbm.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/quants.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/quants.c",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/quants.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/traits.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/traits.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/traits.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/amx/amx.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/amx.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/amx/mmq.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/amx/mmq.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/binary-ops.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/binary-ops.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/binary-ops.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/unary-ops.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/unary-ops.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/unary-ops.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/vec.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/vec.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ops.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/ops.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/cc -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu11 -fPIC -Wno-deprecated-gpu-targets -Wshadow -Wstrict-prototypes -Wpointer-arith -Wmissing-prototypes -Werror=implicit-int -Werror=implicit-function-declaration -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wdouble-promotion -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/quants.c.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/arch/arm/quants.c\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/arch/arm/quants.c",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/quants.c.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU_REPACK -DGGML_USE_OPENMP -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cpu_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/..\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -march=armv8-a+crc+lse+rcpc+rdma+dotprod+fp16fml+sb+ssbs+sve2-sm4+sve2-aes+sve2-sha3+sve2-bitperm+i8mm+bf16+flagm+pauth+dotprod+i8mm+sve -fopenmp -o CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/repack.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/arch/arm/repack.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cpu/arch/arm/repack.cpp",
+  "output": "ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/arm/repack.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_BUILD -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -o CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-backend-reg.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-backend-reg.cpp",
+  "output": "ggml/src/CMakeFiles/ggml.dir/ggml-backend-reg.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/acc.cu\" -o CMakeFiles/ggml-cuda.dir/acc.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/acc.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/acc.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/add-id.cu\" -o CMakeFiles/ggml-cuda.dir/add-id.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/add-id.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/add-id.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/arange.cu\" -o CMakeFiles/ggml-cuda.dir/arange.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/arange.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/arange.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/argmax.cu\" -o CMakeFiles/ggml-cuda.dir/argmax.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/argmax.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argmax.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/argsort.cu\" -o CMakeFiles/ggml-cuda.dir/argsort.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/argsort.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/argsort.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/binbcast.cu\" -o CMakeFiles/ggml-cuda.dir/binbcast.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/binbcast.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/binbcast.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/clamp.cu\" -o CMakeFiles/ggml-cuda.dir/clamp.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/clamp.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/clamp.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/concat.cu\" -o CMakeFiles/ggml-cuda.dir/concat.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/concat.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/concat.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv-transpose-1d.cu\" -o CMakeFiles/ggml-cuda.dir/conv-transpose-1d.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv-transpose-1d.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv-transpose-1d.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d-dw.cu\" -o CMakeFiles/ggml-cuda.dir/conv2d-dw.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d-dw.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-dw.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d-transpose.cu\" -o CMakeFiles/ggml-cuda.dir/conv2d-transpose.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d-transpose.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d-transpose.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d.cu\" -o CMakeFiles/ggml-cuda.dir/conv2d.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/conv2d.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/conv2d.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/convert.cu\" -o CMakeFiles/ggml-cuda.dir/convert.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/convert.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/convert.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/count-equal.cu\" -o CMakeFiles/ggml-cuda.dir/count-equal.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/count-equal.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/count-equal.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cpy.cu\" -o CMakeFiles/ggml-cuda.dir/cpy.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cpy.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cpy.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cross-entropy-loss.cu\" -o CMakeFiles/ggml-cuda.dir/cross-entropy-loss.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cross-entropy-loss.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cross-entropy-loss.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cumsum.cu\" -o CMakeFiles/ggml-cuda.dir/cumsum.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/cumsum.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/cumsum.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/diag.cu\" -o CMakeFiles/ggml-cuda.dir/diag.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/diag.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diag.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/diagmask.cu\" -o CMakeFiles/ggml-cuda.dir/diagmask.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/diagmask.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/diagmask.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn-tile.cu\" -o CMakeFiles/ggml-cuda.dir/fattn-tile.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn-tile.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn-tile.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn-wmma-f16.cu\" -o CMakeFiles/ggml-cuda.dir/fattn-wmma-f16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn-wmma-f16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn-wmma-f16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn.cu\" -o CMakeFiles/ggml-cuda.dir/fattn.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fattn.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fattn.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fill.cu\" -o CMakeFiles/ggml-cuda.dir/fill.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/fill.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/fill.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/getrows.cu\" -o CMakeFiles/ggml-cuda.dir/getrows.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/getrows.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/getrows.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ggml-cuda.cu\" -o CMakeFiles/ggml-cuda.dir/ggml-cuda.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ggml-cuda.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ggml-cuda.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/gla.cu\" -o CMakeFiles/ggml-cuda.dir/gla.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/gla.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/gla.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/im2col.cu\" -o CMakeFiles/ggml-cuda.dir/im2col.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/im2col.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/im2col.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mean.cu\" -o CMakeFiles/ggml-cuda.dir/mean.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mean.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mean.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmf.cu\" -o CMakeFiles/ggml-cuda.dir/mmf.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmf.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmf.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmid.cu\" -o CMakeFiles/ggml-cuda.dir/mmid.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmid.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmid.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmq.cu\" -o CMakeFiles/ggml-cuda.dir/mmq.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmq.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmq.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmvf.cu\" -o CMakeFiles/ggml-cuda.dir/mmvf.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmvf.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvf.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmvq.cu\" -o CMakeFiles/ggml-cuda.dir/mmvq.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/mmvq.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/mmvq.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/norm.cu\" -o CMakeFiles/ggml-cuda.dir/norm.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/norm.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/norm.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/opt-step-adamw.cu\" -o CMakeFiles/ggml-cuda.dir/opt-step-adamw.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/opt-step-adamw.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-adamw.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/opt-step-sgd.cu\" -o CMakeFiles/ggml-cuda.dir/opt-step-sgd.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/opt-step-sgd.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/opt-step-sgd.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/out-prod.cu\" -o CMakeFiles/ggml-cuda.dir/out-prod.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/out-prod.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/out-prod.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pad.cu\" -o CMakeFiles/ggml-cuda.dir/pad.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pad.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pad_reflect_1d.cu\" -o CMakeFiles/ggml-cuda.dir/pad_reflect_1d.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pad_reflect_1d.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pad_reflect_1d.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pool2d.cu\" -o CMakeFiles/ggml-cuda.dir/pool2d.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/pool2d.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/pool2d.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/quantize.cu\" -o CMakeFiles/ggml-cuda.dir/quantize.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/quantize.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/quantize.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/roll.cu\" -o CMakeFiles/ggml-cuda.dir/roll.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/roll.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/roll.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/rope.cu\" -o CMakeFiles/ggml-cuda.dir/rope.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/rope.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/rope.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/scale.cu\" -o CMakeFiles/ggml-cuda.dir/scale.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/scale.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/scale.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/set-rows.cu\" -o CMakeFiles/ggml-cuda.dir/set-rows.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/set-rows.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set-rows.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/set.cu\" -o CMakeFiles/ggml-cuda.dir/set.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/set.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/set.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/softcap.cu\" -o CMakeFiles/ggml-cuda.dir/softcap.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/softcap.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softcap.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/softmax.cu\" -o CMakeFiles/ggml-cuda.dir/softmax.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/softmax.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/softmax.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/solve_tri.cu\" -o CMakeFiles/ggml-cuda.dir/solve_tri.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/solve_tri.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/solve_tri.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ssm-conv.cu\" -o CMakeFiles/ggml-cuda.dir/ssm-conv.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ssm-conv.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-conv.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ssm-scan.cu\" -o CMakeFiles/ggml-cuda.dir/ssm-scan.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/ssm-scan.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/ssm-scan.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/sum.cu\" -o CMakeFiles/ggml-cuda.dir/sum.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/sum.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sum.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/sumrows.cu\" -o CMakeFiles/ggml-cuda.dir/sumrows.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/sumrows.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/sumrows.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/top-k.cu\" -o CMakeFiles/ggml-cuda.dir/top-k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/top-k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/top-k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/topk-moe.cu\" -o CMakeFiles/ggml-cuda.dir/topk-moe.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/topk-moe.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/topk-moe.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/tri.cu\" -o CMakeFiles/ggml-cuda.dir/tri.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/tri.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tri.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/tsembd.cu\" -o CMakeFiles/ggml-cuda.dir/tsembd.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/tsembd.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/tsembd.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/unary.cu\" -o CMakeFiles/ggml-cuda.dir/unary.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/unary.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/unary.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/upscale.cu\" -o CMakeFiles/ggml-cuda.dir/upscale.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/upscale.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/upscale.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/wkv.cu\" -o CMakeFiles/ggml-cuda.dir/wkv.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/wkv.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/wkv.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq112-dv112.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq112-dv112.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq112-dv112.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq112-dv112.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq128-dv128.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq128-dv128.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq128-dv128.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq128-dv128.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq256-dv256.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq256-dv256.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq256-dv256.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq256-dv256.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq40-dv40.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq40-dv40.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq40-dv40.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq40-dv40.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq576-dv512.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq576-dv512.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq576-dv512.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq576-dv512.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq64-dv64.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq64-dv64.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq64-dv64.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq64-dv64.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq72-dv72.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq72-dv72.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq72-dv72.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq72-dv72.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq80-dv80.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq80-dv80.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq80-dv80.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq80-dv80.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq96-dv96.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq96-dv96.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-tile-instance-dkq96-dv96.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-tile-instance-dkq96-dv96.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_1-ncols2_8.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_2.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_16-ncols2_4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_2-ncols2_8.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_32-ncols2_2.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_2.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_4-ncols2_8.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_64-ncols2_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_2.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-mma-f16-instance-ncols1_8-ncols2_8.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq1_s.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq1_s.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq1_s.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq1_s.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_s.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_s.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_s.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_s.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_xs.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xs.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_xs.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xs.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_xxs.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xxs.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq2_xxs.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq2_xxs.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq3_s.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_s.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq3_s.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_s.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq3_xxs.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_xxs.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq3_xxs.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq3_xxs.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq4_nl.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_nl.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq4_nl.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_nl.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq4_xs.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_xs.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-iq4_xs.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-iq4_xs.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-mxfp4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-mxfp4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-mxfp4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-mxfp4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q2_k.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q2_k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q2_k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q3_k.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q3_k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q3_k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q3_k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_0.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_0.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_0.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_0.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_k.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q4_k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q4_k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_0.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_0.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_0.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_0.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_k.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q5_k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q5_k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q6_k.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q6_k.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q6_k.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q6_k.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q8_0.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q8_0.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmq-instance-q8_0.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmq-instance-q8_0.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_1.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_1.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_1.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_1.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_10.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_10.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_10.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_10.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_11.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_11.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_11.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_11.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_12.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_12.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_12.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_12.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_13.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_13.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_13.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_13.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_14.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_14.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_14.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_14.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_15.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_15.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_15.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_15.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_16.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_2.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_2.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_2.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_2.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_3.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_3.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_3.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_3.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_4.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_4.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_4.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_4.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_5.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_5.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_5.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_5.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_6.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_6.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_6.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_6.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_7.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_7.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_7.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_7.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_8.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_8.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_8.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_8.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_9.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_9.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/mmf-instance-ncols_9.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/mmf-instance-ncols_9.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q4_0-q4_0.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q4_0-q4_0.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q4_0-q4_0.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q4_0-q4_0.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q8_0.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q8_0-q8_0.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-q8_0-q8_0.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-q8_0-q8_0.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/ggml/src/ggml-cuda",
+  "command": "/usr/local/cuda-13.1/bin/nvcc -forward-unknown-to-host-compiler -DGGML_BACKEND_BUILD -DGGML_BACKEND_SHARED -DGGML_CUDA_PEER_MAX_BATCH_SIZE=128 -DGGML_SCHED_MAX_COPIES=4 -DGGML_SHARED -D_GNU_SOURCE -D_XOPEN_SOURCE=600 -Dggml_cuda_EXPORTS --options-file CMakeFiles/ggml-cuda.dir/includes_CUDA.rsp -O3 -DNDEBUG -std=c++17 \"--generate-code=arch=compute_110,code=[compute_110,sm_110]\" -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -use_fast_math -extended-lambda -compress-mode=size -Xcompiler \"-Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -Wno-array-bounds -Wextra-semi -Wno-pedantic\" -x cu -c \"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-f16-f16.cu\" -o CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-f16-f16.cu.o",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/ggml-cuda/template-instances/fattn-vec-instance-f16-f16.cu",
+  "output": "ggml/src/ggml-cuda/CMakeFiles/ggml-cuda.dir/template-instances/fattn-vec-instance-f16-f16.cu.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/src",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -DWHISPER_BUILD -DWHISPER_SHARED -DWHISPER_VERSION=\\\"1.8.3\\\" -Dwhisper_EXPORTS -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -fPIC -Wno-deprecated-gpu-targets -Wmissing-declarations -Wmissing-noreturn -Wall -Wextra -Wpedantic -Wcast-qual -Wno-unused-function -o CMakeFiles/whisper.dir/whisper.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/src/whisper.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/src/whisper.cpp",
+  "output": "src/CMakeFiles/whisper.dir/whisper.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/tests",
+  "command": "/usr/bin/c++ -DSAMPLE_PATH=\"\\\"/home/thor/Desktop/voice agent/whisper.cpp/samples/jfk.wav\\\"\" -DVAD_MODEL_PATH=\"\\\"/home/thor/Desktop/voice agent/whisper.cpp/models/for-tests-silero-v6.2.0-ggml.bin\\\"\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../ggml/include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../examples\" -O3 -DNDEBUG -std=gnu++17 -Wno-deprecated-gpu-targets -o CMakeFiles/test-vad.dir/test-vad.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/tests/test-vad.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/tests/test-vad.cpp",
+  "output": "tests/CMakeFiles/test-vad.dir/test-vad.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/tests",
+  "command": "/usr/bin/c++ -DSAMPLE_PATH=\"\\\"/home/thor/Desktop/voice agent/whisper.cpp/samples/jfk.wav\\\"\" -DVAD_MODEL_PATH=\"\\\"/home/thor/Desktop/voice agent/whisper.cpp/models/for-tests-silero-v6.2.0-ggml.bin\\\"\" -DWHISPER_MODEL_PATH=\"\\\"/home/thor/Desktop/voice agent/whisper.cpp/models/ggml-base.en.bin\\\"\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../ggml/include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/tests/../examples\" -O3 -DNDEBUG -std=gnu++17 -Wno-deprecated-gpu-targets -o CMakeFiles/test-vad-full.dir/test-vad-full.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/tests/test-vad-full.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/tests/test-vad-full.cpp",
+  "output": "tests/CMakeFiles/test-vad-full.dir/test-vad-full.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -fPIC -Wno-deprecated-gpu-targets -o CMakeFiles/common.dir/common.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/common.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/common.cpp",
+  "output": "examples/CMakeFiles/common.dir/common.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -fPIC -Wno-deprecated-gpu-targets -o CMakeFiles/common.dir/common-ggml.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/common-ggml.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/common-ggml.cpp",
+  "output": "examples/CMakeFiles/common.dir/common-ggml.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -fPIC -Wno-deprecated-gpu-targets -o CMakeFiles/common.dir/common-whisper.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/common-whisper.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/common-whisper.cpp",
+  "output": "examples/CMakeFiles/common.dir/common-whisper.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -fPIC -Wno-deprecated-gpu-targets -o CMakeFiles/common.dir/grammar-parser.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/grammar-parser.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/grammar-parser.cpp",
+  "output": "examples/CMakeFiles/common.dir/grammar-parser.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/cli",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/whisper-cli.dir/cli.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/cli/cli.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/cli/cli.cpp",
+  "output": "examples/cli/CMakeFiles/whisper-cli.dir/cli.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/bench",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/whisper-bench.dir/bench.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/bench/bench.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/bench/bench.cpp",
+  "output": "examples/bench/CMakeFiles/whisper-bench.dir/bench.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/server",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -std=gnu++17 -Wno-deprecated-gpu-targets -o CMakeFiles/whisper-server.dir/server.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/server/server.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/server/server.cpp",
+  "output": "examples/server/CMakeFiles/whisper-server.dir/server.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/quantize",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/whisper-quantize.dir/quantize.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/quantize/quantize.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/quantize/quantize.cpp",
+  "output": "examples/quantize/CMakeFiles/whisper-quantize.dir/quantize.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/vad-speech-segments",
+  "command": "/usr/bin/c++ -DGGML_BACKEND_SHARED -DGGML_SHARED -DGGML_USE_CPU -DGGML_USE_CUDA -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/.\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/src/../include\" -I\"/home/thor/Desktop/voice agent/whisper.cpp/ggml/src/../include\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/whisper-vad-speech-segments.dir/speech.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/vad-speech-segments/speech.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/vad-speech-segments/speech.cpp",
+  "output": "examples/vad-speech-segments/CMakeFiles/whisper-vad-speech-segments.dir/speech.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/deprecation-warning",
+  "command": "/usr/bin/c++  -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/main.dir/deprecation-warning.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/deprecation-warning/deprecation-warning.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/deprecation-warning/deprecation-warning.cpp",
+  "output": "examples/deprecation-warning/CMakeFiles/main.dir/deprecation-warning.cpp.o"
+},
+{
+  "directory": "/home/thor/dbot_work/whisper_build/examples/deprecation-warning",
+  "command": "/usr/bin/c++  -I\"/home/thor/Desktop/voice agent/whisper.cpp/examples\" -O3 -DNDEBUG -Wno-deprecated-gpu-targets -o CMakeFiles/bench.dir/deprecation-warning.cpp.o -c \"/home/thor/Desktop/voice agent/whisper.cpp/examples/deprecation-warning/deprecation-warning.cpp\"",
+  "file": "/home/thor/Desktop/voice agent/whisper.cpp/examples/deprecation-warning/deprecation-warning.cpp",
+  "output": "examples/deprecation-warning/CMakeFiles/bench.dir/deprecation-warning.cpp.o"
+}
+]
