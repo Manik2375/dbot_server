@@ -1,0 +1,68 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+voice_agent/
+venv/
+.venv/
+env/
+ENV/
+
+# Large model weights & models directory
+models/
+*.onnx
+*.onnx.json
+*.gguf
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# Logs & service outputs
+*.log
+*.log.*
+voice_server.log
+whisper_server.log
+
+# Audio files & runtime recording dumps
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.pcm
+*.raw
+
+# Whisper C++ build directory & compiled objects
+whisper_build/
+build/
+dist/
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+CMakeFiles/
+CMakeCache.txt
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary and scratch files
+tmp/
+temp/
+scratch/

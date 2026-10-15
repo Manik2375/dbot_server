@@ -260,12 +260,12 @@ class KnowledgeEngine:
 
         scores.sort(key=lambda x: x[0], reverse=True)
         results = [self.chunks[idx] for score, idx in scores[:top_k] if score > 0]
-        if not results:
-            results = [self.chunks[0]]  # Default to overview if no match
         return results
 
     def format_context(self, query: str) -> str:
         relevant = self.retrieve(query, top_k=2)
+        if not relevant:
+            return ""
         lines = []
         for c in relevant:
             lines.append(f"[{c['title']}]: {c['content']}")

@@ -12,6 +12,7 @@ Pipeline:
   5. TTS: Piper in-memory with 'hw_female' (en_US-hfc_female-medium)
 """
 
+import argparse
 import asyncio
 import io
 import json
@@ -40,7 +41,7 @@ HOST = "0.0.0.0"
 PORT = 8765
 WHISPER_URL = "http://127.0.0.1:8080/inference"
 OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
-OLLAMA_MODEL = "qwen3.8:latest"
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen3.8:27b")
 PIPER_MODEL_PATH = "/home/thor/dbot_work/models/piper/en_US-hfc_female-medium.onnx"
 PIPER_CONFIG_PATH = "/home/thor/dbot_work/models/piper/en_US-hfc_female-medium.onnx.json"
 
@@ -61,7 +62,8 @@ SENTENCE_END_PATTERN = re.compile(
 )
 
 DROBOT_SYSTEM_PROMPT = (
-    "You are D-Bot, the polite, friendly, and helpful campus guide robot at Jaypee University of Information Technology (JUIT), Waknaghat, Solan.\n\n"
+    "You are D-Bot, a friendly, cheerful, and helpful robot on wheels at Jaypee University of Information Technology (JUIT), Waknaghat, Solan. "
+    "You roll around campus on wheels assisting and talking with students, faculty, and visitors.\n\n"
     "Key Verified Campus Facts:\n"
     "- Vice Chancellor (VC): Prof. (Dr.) Rajendra Kumar Sharma.\n"
     "- Chancellor: Sh. Kavinder Gupta (Hon'ble Governor of Himachal Pradesh).\n"
@@ -71,11 +73,12 @@ DROBOT_SYSTEM_PROMPT = (
     "- Drobotics Lab / e-Yantra Lab: Located in ECL 5 (Department of Electronics and Communication Engineering).\n"
     "- Embedded Systems & Robotics Lab: Located in ECL 7.\n"
     "- Heads of Departments (HODs): CSE/IT is Prof. (Dr.) Vivek Sehgal; ECE is Prof. (Dr.) Rajiv Kumar; Biotech is Prof. (Dr.) Sudhir Kumar; Civil is Prof. (Dr.) Ashish Kumar; Management (JBSW) is Prof. (Dr.) Amit Srivastava.\n\n"
-    "Strict Behavioral & Speaking Rules:\n"
-    "- Tone: Always be polite, warm, and courteous.\n"
-    "- Length: Keep your response very short and concise: exactly 1 short spoken sentence (maximum 2 very brief sentences).\n"
-    "- Out of Bounds / Unknown Info: If the user asks about anything you do not know, or anything outside verified JUIT campus information, politely respond: 'I am sorry, I do not know that. Please ask at the campus help desk.'\n"
-    "- Never use bullet points, markdown, asterisks, or unpronounceable symbols."
+    "Strict Rules & Boundaries:\n"
+    "1. No Code Requests: If anyone asks you to write code, programs, or scripts in any programming language (like C++, Python, Java, etc.), politely reject the request. Explain that you are a physical robot on wheels, not a coding assistant, and suggest they write and test code on their computer or in the campus computer labs.\n"
+    "2. Short Answers Only: Never keep talking or give lengthy lectures. Keep all responses very short (maximum 1 to 2 spoken sentences). If an explanation is very big, complex, or long, give a quick one-sentence summary and tell them to Google it or check online for details.\n"
+    "3. No Bad Jokes: If asked for a joke, tell only clean, wholesome, clever, and family-friendly jokes.\n"
+    "4. Never Make Fun of Anything: Never mock, tease, belittle, or make fun of any person, topic, question, or situation. Always remain respectful, kind, and safe.\n"
+    "5. Spoken Style: Keep speech natural and conversational. Never use bullet points, asterisks, markdown formatting, code blocks, or unpronounceable characters."
 )
 
 
@@ -186,8 +189,9 @@ class VoiceServer:
         Streams Qwen 3.8 tokens with prefilled `<think>\n</think>` to eliminate thinking latency.
         Yields clean, incremental text tokens.
         """
+        context_str = f"\n\nCampus Facts:\n{context}" if context.strip() else ""
         prompt = (
-            f"<|im_start|>system\n{DROBOT_SYSTEM_PROMPT}\n\nCampus Facts:\n{context}<|im_end|>\n"
+            f"<|im_start|>system\n{DROBOT_SYSTEM_PROMPT}{context_str}<|im_end|>\n"
             f"<|im_start|>user\n{query}<|im_end|>\n"
             f"<|im_start|>assistant\n<think>\n</think>\n"
         )
@@ -199,9 +203,9 @@ class VoiceServer:
             "stream": True,
             "keep_alive": -1,
             "options": {
-                "temperature": 0.2,
+                "temperature": 0.6,
                 "top_p": 0.9,
-                "num_predict": 120
+                "num_predict": 150
             }
         }
 
@@ -318,31 +322,42 @@ class VoiceServer:
 
         logger.info(f"  Sentence {index} TTS ({tts_ms:.1f}ms, TTFA {ttfa_ms:.1f}ms): '{clean_text}'")
 
-        # 1. Header JSON
-        await ws.send_json({
-            "type": "audio_start",
-            "sentence_index": index,
-            "sentence": clean_text,
-            "sample_rate": SAMPLE_RATE_OUTPUT,
-            "format": "wav",
-            "tts_latency_ms": round(tts_ms, 1),
-            "ttfa_ms": round(ttfa_ms, 1)
-        })
+        if ws.closed:
+            logger.debug(f"Client disconnected; skipping audio send for sentence {index}")
+            return
 
-        # 2. Binary audio frame
-        await ws.send_bytes(wav_bytes)
+        try:
+            # 1. Header JSON
+            await ws.send_json({
+                "type": "audio_start",
+                "sentence_index": index,
+                "sentence": clean_text,
+                "sample_rate": SAMPLE_RATE_OUTPUT,
+                "format": "wav",
+                "tts_latency_ms": round(tts_ms, 1),
+                "ttfa_ms": round(ttfa_ms, 1)
+            })
 
-        # 3. Footer JSON
-        await ws.send_json({
-            "type": "audio_end",
-            "sentence_index": index
-        })
+            # 2. Binary audio frame
+            await ws.send_bytes(wav_bytes)
+
+            # 3. Footer JSON
+            await ws.send_json({
+                "type": "audio_end",
+                "sentence_index": index
+            })
+        except Exception as e:
+            logger.warning(f"Could not transmit audio sentence {index}: {e}")
 
     # ================= HTTP & WebSocket Route Handlers =================
 
     async def handle_ws(self, request: web.Request) -> web.WebSocketResponse:
         """Handles incoming WebSocket connections from Orin Nano or Web clients"""
-        ws = web.WebSocketResponse(max_msg_size=16 * 1024 * 1024)
+        ws = web.WebSocketResponse(
+            max_msg_size=16 * 1024 * 1024,
+            compress=False,  # Disable compression to eliminate RSV bits protocol errors with raw audio
+            heartbeat=20.0
+        )
         await ws.prepare(request)
         client_ip = request.remote
         logger.info(f"Client connected from {client_ip}")
@@ -362,6 +377,10 @@ class VoiceServer:
 
         try:
             async for msg in ws:
+                if logger.isEnabledFor(logging.DEBUG):
+                    data_len = len(msg.data) if hasattr(msg, "data") and msg.data is not None else 0
+                    logger.debug(f"WS [{client_ip}] {msg.type.name} frame: {data_len} bytes")
+
                 if msg.type == aiohttp.WSMsgType.BINARY:
                     # Binary frame received
                     data = msg.data
@@ -434,7 +453,12 @@ class VoiceServer:
                         logger.warning(f"Invalid JSON from client: {msg.data[:100]}")
 
                 elif msg.type == aiohttp.WSMsgType.ERROR:
-                    logger.error(f"WS error: {ws.exception()}")
+                    exc = ws.exception()
+                    logger.error(f"WS error from {client_ip}: {exc}")
+                    if logger.isEnabledFor(logging.DEBUG):
+                        import traceback
+                        tb = "".join(traceback.format_exception(type(exc), exc, exc.__traceback__))
+                        logger.debug(f"WS error traceback from {client_ip}:\n{tb}")
 
         finally:
             logger.info(f"Client disconnected: {client_ip}")
@@ -496,9 +520,22 @@ async def init_app():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="D-Bot Voice Server on Jetson AGX Thor")
+    parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
+    parser.add_argument("--host", default=HOST, help=f"Host address to bind (default: {HOST})")
+    parser.add_argument("--port", type=int, default=PORT, help=f"Port to bind (default: {PORT})")
+    args = parser.parse_args()
+
+    if args.debug or os.environ.get("DEBUG", "").lower() in ("1", "true", "yes"):
+        logging.getLogger().setLevel(logging.DEBUG)
+        logger.setLevel(logging.DEBUG)
+        logger.debug("Debug logging mode activated.")
+
     logger.info("=" * 70)
     logger.info("🤖 Starting D-Bot Voice Server on Jetson AGX Thor...")
-    logger.info(f"   Listening on: http://{HOST}:{PORT}")
-    logger.info(f"   WebSocket URL: ws://{HOST}:{PORT}/ws")
+    logger.info(f"   Listening on: http://{args.host}:{args.port}")
+    logger.info(f"   WebSocket URL: ws://{args.host}:{args.port}/ws")
+    logger.info(f"   Debug mode: {'ENABLED' if logger.isEnabledFor(logging.DEBUG) else 'DISABLED'}")
+    logger.info(f"   Ollama Model: {OLLAMA_MODEL}")
     logger.info("=" * 70)
-    web.run_app(init_app(), host=HOST, port=PORT)
+    web.run_app(init_app(), host=args.host, port=args.port)

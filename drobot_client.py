@@ -61,7 +61,7 @@ def play_wav_bytes(wav_data: bytes):
 async def run_text_query(server_url: str, text: str):
     """Sends a text test query to Thor and plays back the voice response"""
     logger.info(f"Connecting to Thor server at {server_url}...")
-    async with websockets.connect(server_url) as ws:
+    async with websockets.connect(server_url, compression=None) as ws:
         # Wait for session ready
         init_msg = await ws.recv()
         logger.info(f"Server ready: {init_msg}")
@@ -97,7 +97,7 @@ async def run_audio_file(server_url: str, file_path: str):
         audio_data = f.read()
 
     logger.info(f"Connecting to Thor server at {server_url}...")
-    async with websockets.connect(server_url) as ws:
+    async with websockets.connect(server_url, compression=None) as ws:
         init_msg = await ws.recv()
         logger.info(f"Server ready: {init_msg}")
 
@@ -130,7 +130,7 @@ async def run_interactive_mic(server_url: str):
     """Interactive microphone streaming client using PyAudio or arecord"""
     logger.info("Interactive microphone mode")
     logger.info("Connecting to Thor server...")
-    async with websockets.connect(server_url) as ws:
+    async with websockets.connect(server_url, compression=None) as ws:
         init_msg = await ws.recv()
         logger.info(f"Server ready: {init_msg}")
 
