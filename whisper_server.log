@@ -434,3 +434,18 @@ system_info: n_threads = 8 / 14 | WHISPER : COREML = 0 | OPENVINO = 0 | CUDA : A
 
 operator(): processing 'input.wav' (82432 samples, 5.2 sec), 8 threads, 1 processors, lang = en, task = transcribe, timestamps = 0 ...
 
+
+system_info: n_threads = 8 / 14 | WHISPER : COREML = 0 | OPENVINO = 0 | CUDA : ARCHS = 1100 | PEER_MAX_BATCH_SIZE = 128 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | SVE = 1 | DOTPROD = 1 | SVE_CNT = 16 | OPENMP = 1 | REPACK = 1 | 
+
+operator(): processing 'input.wav' (36864 samples, 2.3 sec), 8 threads, 1 processors, lang = en, task = transcribe, timestamps = 0 ...
+
+
+system_info: n_threads = 8 / 14 | WHISPER : COREML = 0 | OPENVINO = 0 | CUDA : ARCHS = 1100 | PEER_MAX_BATCH_SIZE = 128 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | SVE = 1 | DOTPROD = 1 | SVE_CNT = 16 | OPENMP = 1 | REPACK = 1 | 
+
+operator(): processing 'input.wav' (36352 samples, 2.3 sec), 8 threads, 1 processors, lang = en, task = transcribe, timestamps = 0 ...
+
+
+system_info: n_threads = 8 / 14 | WHISPER : COREML = 0 | OPENVINO = 0 | CUDA : ARCHS = 1100 | PEER_MAX_BATCH_SIZE = 128 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | SVE = 1 | DOTPROD = 1 | SVE_CNT = 16 | OPENMP = 1 | REPACK = 1 | 
+
+operator(): processing 'input.wav' (45568 samples, 2.8 sec), 8 threads, 1 processors, lang = en, task = transcribe, timestamps = 0 ...
+

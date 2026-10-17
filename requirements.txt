@@ -1,0 +1,20 @@
+# ==============================================================================
+# D-Bot Voice Pipeline Server Requirements
+# Tested on Python 3.12 (Jetson AGX Thor / aarch64 & Linux x86_64)
+# ==============================================================================
+
+# Async HTTP & WebSocket Server for Voice Pipeline
+aiohttp>=3.9.0
+
+# WebSocket Protocol for Jetson Orin Nano Client & Web Browser
+websockets>=12.0
+
+# Fast Local Neural Text-to-Speech (Piper TTS)
+piper-tts>=1.2.0
+onnxruntime>=1.16.0
+
+# Numerical & Audio Array Processing
+numpy>=1.24.0
+
+# HTTP Client Utilities
+requests>=2.31.0
