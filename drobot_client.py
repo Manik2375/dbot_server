@@ -20,6 +20,7 @@ import io
 import json
 import logging
 import os
+import struct
 import subprocess
 import sys
 import time
@@ -33,6 +34,16 @@ except ImportError:
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("drobot_client")
+
+
+def pack_audio_message(audio_data: bytes, session_id: str = "orin-nano-01") -> bytes:
+    """
+    Packs audio into binary frame:
+    [4 bytes little-endian uint32 header length] + [header JSON bytes] + [audio bytes]
+    """
+    header_json = json.dumps({"session_id": session_id}).encode("utf-8")
+    header_len = struct.pack("<I", len(header_json))
+    return header_len + header_json + audio_data
 
 
 def play_wav_bytes(wav_data: bytes):
@@ -59,36 +70,37 @@ def play_wav_bytes(wav_data: bytes):
 
 
 async def run_text_query(server_url: str, text: str):
-    """Sends a text test query to Thor and plays back the voice response"""
+    """Sends a text test query to Thor and receives JSON contract + synthesized audio"""
     logger.info(f"Connecting to Thor server at {server_url}...")
     async with websockets.connect(server_url, compression=None) as ws:
-        # Wait for session ready
         init_msg = await ws.recv()
         logger.info(f"Server ready: {init_msg}")
 
-        logger.info(f"Sending query: '{text}'")
+        logger.info(f"Sending text query: '{text}'")
+        t0 = time.time()
         await ws.send(json.dumps({"type": "text_query", "text": text}))
 
-        sentence_idx = 0
-        while True:
-            msg = await ws.recv()
-            if isinstance(msg, bytes):
-                logger.info(f"🔊 Received sentence {sentence_idx} audio ({len(msg)} bytes). Playing...")
-                play_wav_bytes(msg)
-                sentence_idx += 1
-            else:
-                data = json.loads(msg)
-                mtype = data.get("type")
-                if mtype == "llm_chunk":
-                    print(data.get("token", ""), end="", flush=True)
-                elif mtype == "turn_complete":
-                    print("\n")
-                    logger.info(f"✓ Turn complete! Total latency: {data.get('total_latency_ms')}ms")
-                    break
+        # Expect first JSON contract, then binary audio
+        msg1 = await ws.recv()
+        if isinstance(msg1, str):
+            res_json = json.loads(msg1)
+            logger.info("--------------------------------------------------")
+            logger.info(f"Received JSON Contract: {json.dumps(res_json, indent=2)}")
+            if res_json.get("type") == "tool_call":
+                tc = res_json.get("tool_call", {})
+                logger.info(f"🤖 [ROBOT ACTION] Tool Call: {tc.get('name')}({tc.get('args')})")
+            logger.info(f"🗣️ [Robot Speech] \"{res_json.get('text')}\"")
+            logger.info("--------------------------------------------------")
+
+        msg2 = await ws.recv()
+        if isinstance(msg2, bytes):
+            total_ms = (time.time() - t0) * 1000.0
+            logger.info(f"🔊 Received {len(msg2)} bytes of synthesized speech ({total_ms:.1f}ms). Playing...")
+            play_wav_bytes(msg2)
 
 
 async def run_audio_file(server_url: str, file_path: str):
-    """Sends an audio WAV file to Thor as a spoken query"""
+    """Sends an audio WAV file to Thor as a spoken query using packed binary format"""
     if not os.path.exists(file_path):
         logger.error(f"File not found: {file_path}")
         return
@@ -96,38 +108,41 @@ async def run_audio_file(server_url: str, file_path: str):
     with open(file_path, "rb") as f:
         audio_data = f.read()
 
+    # Pack into: [4 bytes header len] + [header JSON] + [audio bytes]
+    packed_message = pack_audio_message(audio_data, session_id="test-file-session")
+
     logger.info(f"Connecting to Thor server at {server_url}...")
     async with websockets.connect(server_url, compression=None) as ws:
         init_msg = await ws.recv()
         logger.info(f"Server ready: {init_msg}")
 
         t0 = time.time()
-        logger.info(f"Transmitting {len(audio_data)} bytes of audio...")
-        await ws.send(audio_data)
+        logger.info(f"Transmitting packed audio message ({len(packed_message)} bytes)...")
+        await ws.send(packed_message)
 
-        sentence_idx = 0
-        while True:
-            msg = await ws.recv()
-            if isinstance(msg, bytes):
-                ttfa = (time.time() - t0) * 1000.0
-                logger.info(f"🔊 Received audio chunk {sentence_idx} ({len(msg)} bytes, TTFA: {ttfa:.1f}ms). Playing...")
-                play_wav_bytes(msg)
-                sentence_idx += 1
-            else:
-                data = json.loads(msg)
-                mtype = data.get("type")
-                if mtype == "stt_result":
-                    logger.info(f"Transcription: '{data.get('transcript')}' (STT took {data.get('latency_ms')}ms)")
-                elif mtype == "llm_chunk":
-                    print(data.get("token", ""), end="", flush=True)
-                elif mtype == "turn_complete":
-                    print("\n")
-                    logger.info(f"✓ Turn complete! Total latency: {data.get('total_latency_ms')}ms")
-                    break
+        # 1. Expect JSON message
+        msg1 = await ws.recv()
+        if isinstance(msg1, str):
+            res_json = json.loads(msg1)
+            logger.info("--------------------------------------------------")
+            logger.info(f"Received JSON Contract: {json.dumps(res_json, indent=2)}")
+            logger.info(f"👂 [User Spoke] \"{res_json.get('transcript')}\"")
+            if res_json.get("type") == "tool_call":
+                tc = res_json.get("tool_call", {})
+                logger.info(f"🤖 [ROBOT ACTION] Tool Call: {tc.get('name')}({tc.get('args')})")
+            logger.info(f"🗣️ [Robot Speech] \"{res_json.get('text')}\"")
+            logger.info("--------------------------------------------------")
+
+        # 2. Expect synthesized WAV bytes
+        msg2 = await ws.recv()
+        if isinstance(msg2, bytes):
+            total_ms = (time.time() - t0) * 1000.0
+            logger.info(f"🔊 Received {len(msg2)} bytes of synthesized audio ({total_ms:.1f}ms). Playing...")
+            play_wav_bytes(msg2)
 
 
 async def run_interactive_mic(server_url: str):
-    """Interactive microphone streaming client using PyAudio or arecord"""
+    """Interactive microphone client using arecord on Jetson"""
     logger.info("Interactive microphone mode")
     logger.info("Connecting to Thor server...")
     async with websockets.connect(server_url, compression=None) as ws:
@@ -135,7 +150,7 @@ async def run_interactive_mic(server_url: str):
         logger.info(f"Server ready: {init_msg}")
 
         print("\n=== D-Bot Voice Client Ready ===")
-        print("Press ENTER to record a 4-second voice query, or type 'q' to quit.")
+        print("Press ENTER to record a 3.5-second voice query, or type 'q' to quit.")
 
         while True:
             user_input = await asyncio.get_event_loop().run_in_executor(None, input, "\n[Press ENTER to Speak] > ")
@@ -143,9 +158,8 @@ async def run_interactive_mic(server_url: str):
                 break
 
             print("🔴 Recording 3.5s from microphone...")
-            # Use arecord (native on Jetson)
             proc = await asyncio.create_subprocess_exec(
-                "arecord", "-D", "default", "-f", "S16_LE", "-r", "16000", "-c", "1", "-d", "4", "-t", "wav", "-q",
+                "arecord", "-D", "default", "-f", "S16_LE", "-r", "16000", "-c", "1", "-d", "4", "-t", "raw", "-q",
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.DEVNULL
             )
@@ -156,23 +170,28 @@ async def run_interactive_mic(server_url: str):
                 continue
 
             print("⚡ Sending audio to Thor...")
+            packed_data = pack_audio_message(stdout, session_id="live-mic-session")
             t0 = time.time()
-            await ws.send(stdout)
+            await ws.send(packed_data)
 
-            while True:
-                msg = await ws.recv()
-                if isinstance(msg, bytes):
-                    play_wav_bytes(msg)
-                else:
-                    data = json.loads(msg)
-                    mtype = data.get("type")
-                    if mtype == "stt_result":
-                        print(f"👂 You said: \"{data.get('transcript')}\"")
-                    elif mtype == "llm_chunk":
-                        print(data.get("token", ""), end="", flush=True)
-                    elif mtype == "turn_complete":
-                        print(f"\n[Total Response Time: {data.get('total_latency_ms')}ms]")
-                        break
+            # Receive JSON contract
+            msg1 = await ws.recv()
+            if isinstance(msg1, str):
+                res_json = json.loads(msg1)
+                print("--------------------------------------------------")
+                print(f"👂 You said: \"{res_json.get('transcript')}\"")
+                if res_json.get("type") == "tool_call":
+                    tc = res_json.get("tool_call", {})
+                    print(f"🤖 Action: {tc.get('name')}({tc.get('args')})")
+                print(f"🗣️ D-Bot: \"{res_json.get('text')}\"")
+                print("--------------------------------------------------")
+
+            # Receive synthesized audio
+            msg2 = await ws.recv()
+            if isinstance(msg2, bytes):
+                total_ms = (time.time() - t0) * 1000.0
+                print(f"[Latency: {total_ms:.1f}ms] Playing robot speech...")
+                play_wav_bytes(msg2)
 
 
 def main():

@@ -19,9 +19,10 @@ import json
 import logging
 import os
 import re
+import struct
 import time
 import wave
-from typing import Optional, List, Dict, Any, AsyncGenerator, Tuple
+from typing import Optional, List, Dict, Any, AsyncGenerator, Tuple, Set
 
 import aiohttp
 from aiohttp import web
@@ -40,10 +41,11 @@ logger = logging.getLogger("voice_server")
 HOST = "0.0.0.0"
 PORT = 8765
 WHISPER_URL = "http://127.0.0.1:8080/inference"
-OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
+OLLAMA_CHAT_URL = os.environ.get("OLLAMA_CHAT_URL", "http://127.0.0.1:11434/api/chat")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen3.8:27b")
 PIPER_MODEL_PATH = "/home/thor/dbot_work/models/piper/en_US-hfc_female-medium.onnx"
 PIPER_CONFIG_PATH = "/home/thor/dbot_work/models/piper/en_US-hfc_female-medium.onnx.json"
+TOOLS_FILE_PATH = os.path.join(os.path.dirname(__file__), "tools.json")
 
 # Audio constants
 SAMPLE_RATE_INPUT = 16000
@@ -61,6 +63,27 @@ SENTENCE_END_PATTERN = re.compile(
     r"(?<!\bProf)(?<!\bDr)(?<!\bMr)(?<!\bMrs)(?<!\bMs)(?<!\bSh)(?<!\bShri)(?<!\bNo)(?<!\bDept)([.!?\n]+)\s*"
 )
 
+
+def load_tools_definitions(file_path: str = TOOLS_FILE_PATH) -> Tuple[List[Dict[str, Any]], Set[str]]:
+    """Loads Ollama tools schema from JSON file."""
+    try:
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                tools_data = json.load(f)
+                allowed = {
+                    t.get("function", {}).get("name")
+                    for t in tools_data
+                    if t.get("function", {}).get("name")
+                }
+                logger.info(f"Loaded {len(tools_data)} robot tools from {file_path}: {list(allowed)}")
+                return tools_data, allowed
+        else:
+            logger.warning(f"Tools file not found at {file_path}")
+    except Exception as e:
+        logger.error(f"Error loading tools definition from {file_path}: {e}")
+    return [], set()
+
+
 DROBOT_SYSTEM_PROMPT = (
     "You are D-Bot, a friendly, cheerful, and helpful robot on wheels at Jaypee University of Information Technology (JUIT), Waknaghat, Solan. "
     "You roll around campus on wheels assisting and talking with students, faculty, and visitors.\n\n"
@@ -73,12 +96,19 @@ DROBOT_SYSTEM_PROMPT = (
     "- Drobotics Lab / e-Yantra Lab: Located in ECL 5 (Department of Electronics and Communication Engineering).\n"
     "- Embedded Systems & Robotics Lab: Located in ECL 7.\n"
     "- Heads of Departments (HODs): CSE/IT is Prof. (Dr.) Vivek Sehgal; ECE is Prof. (Dr.) Rajiv Kumar; Biotech is Prof. (Dr.) Sudhir Kumar; Civil is Prof. (Dr.) Ashish Kumar; Management (JBSW) is Prof. (Dr.) Amit Srivastava.\n\n"
+    "Robot Physical Capabilities & Tool Calling:\n"
+    "- You have physical motorized wheels and navigation systems.\n"
+    "- When the user asks you to move, back up, rotate, turn, navigate somewhere on campus, deliver an item, or stop, you MUST call the appropriate tool.\n"
+    "- Only call tools that are defined in your tool list (navigate_to, navigate_and_deliver, move_distance, rotate, stop). Never invent new tool names.\n"
+    "- When calling a tool, provide a brief, clear spoken confirmation in your response content (e.g., 'Moving forward 1 meter now.').\n"
+    "- If the user asks a normal question, joke, story, math problem, or campus information, do NOT call any tool; simply respond directly with spoken text in 1 to 2 sentences.\n\n"
     "Strict Rules & Boundaries:\n"
     "1. No Code Requests: If anyone asks you to write code, programs, or scripts in any programming language (like C++, Python, Java, etc.), politely reject the request. Explain that you are a physical robot on wheels, not a coding assistant, and suggest they write and test code on their computer or in the campus computer labs.\n"
-    "2. Short Answers Only: Never keep talking or give lengthy lectures. Keep all responses very short (maximum 1 to 2 spoken sentences). If an explanation is very big, complex, or long, give a quick one-sentence summary and tell them to Google it or check online for details.\n"
+    "2. Short Answers Only: Never keep talking or give lengthy lectures. Keep all spoken responses very short (maximum 1 to 2 spoken sentences). If an explanation is very big, complex, or long, give a quick one-sentence summary and tell them to Google it or check online for details.\n"
     "3. No Bad Jokes: If asked for a joke, tell only clean, wholesome, clever, and family-friendly jokes.\n"
     "4. Never Make Fun of Anything: Never mock, tease, belittle, or make fun of any person, topic, question, or situation. Always remain respectful, kind, and safe.\n"
-    "5. Spoken Style: Keep speech natural and conversational. Never use bullet points, asterisks, markdown formatting, code blocks, or unpronounceable characters."
+    "5. Spoken Style: Keep speech natural and conversational. Never use bullet points, asterisks, markdown formatting, emojis, code blocks, or unpronounceable characters.\n"
+    "6. No Internal Thinking: Do not use internal thinking, reasoning tags, or explanations. Immediately output the spoken response or tool call."
 )
 
 
@@ -176,178 +206,198 @@ class VoiceServer:
         self.stt = WhisperSTTClient()
         self.tts = PiperTTSEngine()
         self.rag = KnowledgeEngine()
+        self.tools, self.allowed_tool_names = load_tools_definitions()
         self.session: Optional[aiohttp.ClientSession] = None
-        logger.info("Voice Server initialized with all engines ready.")
+        logger.info(f"Voice Server initialized with {len(self.tools)} tools loaded: {list(self.allowed_tool_names)}")
 
     async def get_session(self) -> aiohttp.ClientSession:
         if self.session is None or self.session.closed:
-            self.session = aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=30))
+            self.session = aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=45))
         return self.session
 
-    async def stream_llm(self, query: str, context: str) -> AsyncGenerator[str, None]:
+    async def chat_with_tools(self, query: str, context: str) -> Dict[str, Any]:
         """
-        Streams Qwen 3.8 tokens with prefilled `<think>\n</think>` to eliminate thinking latency.
-        Yields clean, incremental text tokens.
+        Calls Ollama's /api/chat endpoint with tool calling enabled.
+        Passes retrieved context and the user query.
         """
-        context_str = f"\n\nCampus Facts:\n{context}" if context.strip() else ""
-        prompt = (
-            f"<|im_start|>system\n{DROBOT_SYSTEM_PROMPT}{context_str}<|im_end|>\n"
-            f"<|im_start|>user\n{query}<|im_end|>\n"
-            f"<|im_start|>assistant\n<think>\n</think>\n"
-        )
+        system_content = DROBOT_SYSTEM_PROMPT
+        if context.strip():
+            system_content += f"\n\nCampus Facts:\n{context}"
+
+        messages = [
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": query}
+        ]
 
         payload = {
             "model": OLLAMA_MODEL,
-            "prompt": prompt,
-            "raw": True,
-            "stream": True,
-            "keep_alive": -1,
+            "messages": messages,
+            "tools": self.tools,
+            "stream": False,
+            "think": False,
             "options": {
-                "temperature": 0.6,
+                "think": False,
+                "temperature": 0.5,
                 "top_p": 0.9,
-                "num_predict": 150
+                "num_predict": 160
             }
         }
 
         session = await self.get_session()
-        async with session.post(OLLAMA_URL, json=payload) as resp:
-            if resp.status != 200:
-                err = await resp.text()
-                logger.error(f"Ollama error {resp.status}: {err}")
-                yield "I apologize, but I am currently having trouble processing that query."
-                return
+        try:
+            async with session.post(OLLAMA_CHAT_URL, json=payload) as resp:
+                if resp.status == 200:
+                    return await resp.json()
+                else:
+                    err = await resp.text()
+                    logger.error(f"Ollama chat error {resp.status}: {err}")
+                    return {"message": {"role": "assistant", "content": "I apologize, but I am currently having trouble processing that query."}}
+        except Exception as e:
+            logger.error(f"Ollama chat connection error: {e}")
+            return {"message": {"role": "assistant", "content": "I apologize, but I am currently unable to reach the language model."}}
 
-            async for line in resp.content:
-                if line:
-                    try:
-                        data = json.loads(line.decode("utf-8"))
-                        token = data.get("response", "")
-                        # Filter out potential internal tokens
-                        if "<think>" in token or "</think>" in token or "<|im_end|>" in token:
-                            continue
-                        if token:
-                            yield token
-                    except Exception:
-                        continue
+    def normalize_response(self, transcript: str, res_json: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalizes whatever Ollama returns (plain content or tool_calls) into the exact contract:
+        {
+          "transcript": "",
+          "type": "speak" | "tool_call",
+          "text": "<spoken text -- also what you will synthesize into the following audio>",
+          "tool_call": {"name": "...", "args": {...}} // only present if type is tool_call
+        }
+        """
+        message = res_json.get("message", {})
+        raw_content = message.get("content", "").strip()
+        tool_calls = message.get("tool_calls", [])
 
-    async def process_utterance(self, ws: web.WebSocketResponse, audio_data: bytes):
-        """Processes an audio utterance through the STT -> RAG -> LLM -> TTS pipeline"""
+        # Clean thinking tags, markdown, asterisks, and emojis
+        clean_content = re.sub(r"<think>.*?</think>", "", raw_content, flags=re.DOTALL)
+        clean_content = re.sub(r"[\*\#\_\[\]\`]", "", clean_content)
+        clean_content = re.sub(r"[\U00010000-\U0010ffff]", "", clean_content).strip()
+
+        if tool_calls:
+            tc = tool_calls[0]
+            fn = tc.get("function", {})
+            name = fn.get("name", "")
+            args = fn.get("arguments", {})
+            if isinstance(args, str):
+                try:
+                    args = json.loads(args)
+                except Exception:
+                    args = {}
+
+            if name in self.allowed_tool_names:
+                spoken = clean_content
+                if not spoken:
+                    # Provide natural spoken feedback if Ollama did not provide content
+                    if name == "navigate_to":
+                        loc = args.get("location", "the destination")
+                        spoken = f"Navigating to {loc} now."
+                    elif name == "navigate_and_deliver":
+                        loc = args.get("location", "the destination")
+                        item = args.get("item", "the item")
+                        spoken = f"Delivering {item} to {loc}."
+                    elif name == "move_distance":
+                        meters = float(args.get("meters", 1.0))
+                        dist_str = f"{meters:.1f}".rstrip('0').rstrip('.')
+                        if meters >= 0:
+                            spoken = f"Moving forward {dist_str} meters."
+                        else:
+                            spoken = f"Moving backward {abs(meters):.1f} meters."
+                    elif name == "rotate":
+                        degs = float(args.get("degrees", 0.0))
+                        deg_str = f"{degs:.1f}".rstrip('0').rstrip('.')
+                        if degs >= 0:
+                            spoken = f"Rotating {deg_str} degrees counterclockwise."
+                        else:
+                            spoken = f"Rotating {abs(degs):.1f} degrees clockwise."
+                    elif name == "stop":
+                        spoken = "Stopping all robot motion immediately."
+                    else:
+                        spoken = f"Executing {name}."
+
+                return {
+                    "transcript": transcript,
+                    "type": "tool_call",
+                    "text": spoken,
+                    "tool_call": {
+                        "name": name,
+                        "args": args
+                    }
+                }
+
+        # Plain speak response
+        spoken = clean_content if clean_content else "I am here. How can I assist you?"
+        return {
+            "transcript": transcript,
+            "type": "speak",
+            "text": spoken
+        }
+
+    async def process_utterance(self, ws: web.WebSocketResponse, audio_data: bytes, session_id: str = ""):
+        """Processes an audio utterance through STT -> RAG -> Ollama Chat (tools) -> Piper TTS"""
         total_t0 = time.time()
-        logger.info(f"Incoming audio utterance: {len(audio_data)} bytes")
+        logger.info(f"Incoming audio utterance: {len(audio_data)} bytes (session: '{session_id}')")
 
         # 1. STT via Whisper CUDA
-        await ws.send_json({"type": "status", "stage": "stt", "message": "Transcribing speech on GPU..."})
         transcript, stt_ms = await self.stt.transcribe(audio_data)
 
         # Anti-hallucination check
         cleaned_transcript = transcript.lower().strip()
         if not cleaned_transcript or cleaned_transcript in HALLUCINATIONS or len(cleaned_transcript) <= 2:
             logger.info(f"Ignoring silent/hallucinated transcript: '{transcript}'")
-            await ws.send_json({"type": "stt_result", "transcript": "", "ignored": True})
             return
 
         logger.info(f"✓ STT Result ({stt_ms:.1f}ms): '{transcript}'")
-        await ws.send_json({
-            "type": "stt_result",
-            "transcript": transcript,
-            "latency_ms": round(stt_ms, 1)
-        })
 
         # 2. Knowledge RAG
         rag_t0 = time.time()
         context = self.rag.format_context(transcript)
         rag_ms = (time.time() - rag_t0) * 1000.0
-        logger.info(f"✓ RAG Context retrieved in {rag_ms:.1f}ms")
+        logger.info(f"✓ RAG Context retrieved in {rag_ms:.1f}ms (matches: {bool(context.strip())})")
 
-        # 3. LLM Generation + 4. Streaming Sentence TTS
-        await ws.send_json({"type": "status", "stage": "llm", "message": "D-Bot thinking..."})
-        
-        token_buffer = ""
-        full_response = []
-        sentence_index = 0
-        first_token_time = None
+        # 3. Ollama Chat with Tools
+        llm_t0 = time.time()
+        chat_res = await self.chat_with_tools(transcript, context)
+        llm_ms = (time.time() - llm_t0) * 1000.0
 
+        # 4. Normalize to exact JSON contract
+        contract_data = self.normalize_response(transcript, chat_res)
+        logger.info(f"✓ LLM ({llm_ms:.1f}ms) -> [{contract_data['type']}] text: '{contract_data['text']}'" +
+                    (f" | tool: {contract_data.get('tool_call')}" if contract_data['type'] == 'tool_call' else ""))
 
-        async for token in self.stream_llm(transcript, context):
-            if first_token_time is None:
-                first_token_time = time.time()
-                ttft_ms = (first_token_time - total_t0) * 1000.0
-                await ws.send_json({"type": "llm_ttft", "ttft_ms": round(ttft_ms, 1)})
-
-            token_buffer += token
-            full_response.append(token)
-            await ws.send_json({"type": "llm_chunk", "token": token})
-
-            # Check if a sentence is complete
-            match = SENTENCE_END_PATTERN.search(token_buffer)
-            if match:
-                end_pos = match.end()
-                sentence = token_buffer[:end_pos].strip()
-                token_buffer = token_buffer[end_pos:]
-
-                if len(sentence) > 3:
-                    await self._synthesize_and_send(ws, sentence, sentence_index, total_t0)
-                    sentence_index += 1
-
-        # Process any leftover text
-        remaining = token_buffer.strip()
-        if remaining and len(remaining) > 2:
-            await self._synthesize_and_send(ws, remaining, sentence_index, total_t0)
-            sentence_index += 1
-
-        total_ms = (time.time() - total_t0) * 1000.0
-        full_text = "".join(full_response).strip()
-        logger.info(f"✓ Turn complete in {total_ms:.1f}ms. Total sentences: {sentence_index}")
-
-        await ws.send_json({
-            "type": "turn_complete",
-            "full_text": full_text,
-            "total_latency_ms": round(total_ms, 1)
-        })
-
-    async def _synthesize_and_send(self, ws: web.WebSocketResponse, sentence: str, index: int, pipeline_start_time: float):
-        """Synthesizes a single sentence and sends audio chunk over WebSocket"""
+        # 5. Synthesize speech using Piper (WAV bytes)
         tts_t0 = time.time()
-        # Clean sentence from any symbols that shouldn't be read out
-        clean_text = re.sub(r"[\*\#\_\[\]]", "", sentence).strip()
-        if not clean_text:
-            return
-
-        # Run CPU ONNX synthesis in worker thread so event loop remains unblocked
         loop = asyncio.get_running_loop()
-        wav_bytes = await loop.run_in_executor(None, self.tts.synthesize_sentence_wav, clean_text)
-
+        wav_bytes = await loop.run_in_executor(None, self.tts.synthesize_sentence_wav, contract_data["text"])
         tts_ms = (time.time() - tts_t0) * 1000.0
-        ttfa_ms = (time.time() - pipeline_start_time) * 1000.0
+        total_ms = (time.time() - total_t0) * 1000.0
 
-        logger.info(f"  Sentence {index} TTS ({tts_ms:.1f}ms, TTFA {ttfa_ms:.1f}ms): '{clean_text}'")
+        logger.info(f"✓ TTS ({tts_ms:.1f}ms, {len(wav_bytes)} audio bytes). Turn complete in {total_ms:.1f}ms")
 
-        if ws.closed:
-            logger.debug(f"Client disconnected; skipping audio send for sentence {index}")
-            return
-
-        try:
-            # 1. Header JSON
-            await ws.send_json({
-                "type": "audio_start",
-                "sentence_index": index,
-                "sentence": clean_text,
-                "sample_rate": SAMPLE_RATE_OUTPUT,
-                "format": "wav",
-                "tts_latency_ms": round(tts_ms, 1),
-                "ttfa_ms": round(ttfa_ms, 1)
-            })
-
-            # 2. Binary audio frame
+        # 6. Send back: first the JSON message, then the synthesized audio as binary, in that order
+        if not ws.closed:
+            await ws.send_str(json.dumps(contract_data))
             await ws.send_bytes(wav_bytes)
 
-            # 3. Footer JSON
-            await ws.send_json({
-                "type": "audio_end",
-                "sentence_index": index
-            })
-        except Exception as e:
-            logger.warning(f"Could not transmit audio sentence {index}: {e}")
+    async def process_text_query(self, ws: web.WebSocketResponse, query: str):
+        """Processes a direct text query through RAG -> Ollama Chat (tools) -> Piper TTS"""
+        total_t0 = time.time()
+        logger.info(f"Incoming text query: '{query}'")
+
+        context = self.rag.format_context(query)
+        chat_res = await self.chat_with_tools(query, context)
+        contract_data = self.normalize_response(query, chat_res)
+
+        loop = asyncio.get_running_loop()
+        wav_bytes = await loop.run_in_executor(None, self.tts.synthesize_sentence_wav, contract_data["text"])
+        total_ms = (time.time() - total_t0) * 1000.0
+
+        logger.info(f"✓ Text query complete in {total_ms:.1f}ms -> [{contract_data['type']}] text: '{contract_data['text']}'")
+
+        if not ws.closed:
+            await ws.send_str(json.dumps(contract_data))
+            await ws.send_bytes(wav_bytes)
 
     # ================= HTTP & WebSocket Route Handlers =================
 
@@ -355,7 +405,7 @@ class VoiceServer:
         """Handles incoming WebSocket connections from Orin Nano or Web clients"""
         ws = web.WebSocketResponse(
             max_msg_size=16 * 1024 * 1024,
-            compress=False,  # Disable compression to eliminate RSV bits protocol errors with raw audio
+            compress=False,
             heartbeat=20.0
         )
         await ws.prepare(request)
@@ -365,11 +415,12 @@ class VoiceServer:
         # Send welcome message
         await ws.send_json({
             "type": "session_ready",
-            "version": "1.0",
+            "version": "2.0",
             "robot": "D-Bot",
             "piper_voice": "en_US-hfc_female-medium",
             "whisper_model": "large-v3-turbo (CUDA)",
-            "llm_model": OLLAMA_MODEL
+            "llm_model": OLLAMA_MODEL,
+            "tools_available": list(self.allowed_tool_names)
         })
 
         audio_buffer = bytearray()
@@ -382,13 +433,27 @@ class VoiceServer:
                     logger.debug(f"WS [{client_ip}] {msg.type.name} frame: {data_len} bytes")
 
                 if msg.type == aiohttp.WSMsgType.BINARY:
-                    # Binary frame received
                     data = msg.data
+                    session_id = ""
+                    audio_payload = data
+
+                    # Unpack format: [4 bytes little-endian uint32 header length] + [header JSON bytes] + [raw PCM audio bytes]
+                    if len(data) >= 4:
+                        hdr_len = struct.unpack("<I", data[:4])[0]
+                        if 0 < hdr_len < len(data) - 4:
+                            try:
+                                hdr_json = json.loads(data[4:4 + hdr_len].decode("utf-8"))
+                                session_id = hdr_json.get("session_id", "")
+                                audio_payload = data[4 + hdr_len:]
+                                if logger.isEnabledFor(logging.DEBUG):
+                                    logger.debug(f"Unpacked header JSON ({hdr_len} bytes, session_id='{session_id}'), audio: {len(audio_payload)} bytes")
+                            except Exception:
+                                audio_payload = data
+
                     if is_streaming_audio:
-                        audio_buffer.extend(data)
+                        audio_buffer.extend(audio_payload)
                     else:
-                        # Full standalone audio utterance
-                        asyncio.create_task(self.process_utterance(ws, data))
+                        asyncio.create_task(self.process_utterance(ws, audio_payload, session_id))
 
                 elif msg.type == aiohttp.WSMsgType.TEXT:
                     try:
@@ -412,39 +477,9 @@ class VoiceServer:
                                 asyncio.create_task(self.process_utterance(ws, audio_to_process))
 
                         elif msg_type == "text_query":
-                            # Direct text test query
                             query = payload.get("text", "")
                             if query:
-                                context = self.rag.format_context(query)
-                                sentence_index = 0
-                                token_buf = ""
-                                t0 = time.time()
-                                full_resp = []
-
-                                async for token in self.stream_llm(query, context):
-                                    token_buf += token
-                                    full_resp.append(token)
-                                    await ws.send_json({"type": "llm_chunk", "token": token})
-
-                                    match = SENTENCE_END_PATTERN.search(token_buf)
-                                    if match:
-                                        end_pos = match.end()
-                                        s = token_buf[:end_pos].strip()
-                                        token_buf = token_buf[end_pos:]
-                                        if len(s) > 3:
-                                            await self._synthesize_and_send(ws, s, sentence_index, t0)
-                                            sentence_index += 1
-
-                                remaining_text = token_buf.strip()
-                                if remaining_text and len(remaining_text) > 2:
-                                    await self._synthesize_and_send(ws, remaining_text, sentence_index, t0)
-                                    sentence_index += 1
-
-                                await ws.send_json({
-                                    "type": "turn_complete",
-                                    "full_text": "".join(full_resp).strip(),
-                                    "total_latency_ms": round((time.time() - t0) * 1000.0, 1)
-                                })
+                                asyncio.create_task(self.process_text_query(ws, query))
 
                         elif msg_type == "ping":
                             await ws.send_json({"type": "pong", "time": time.time()})
@@ -455,10 +490,6 @@ class VoiceServer:
                 elif msg.type == aiohttp.WSMsgType.ERROR:
                     exc = ws.exception()
                     logger.error(f"WS error from {client_ip}: {exc}")
-                    if logger.isEnabledFor(logging.DEBUG):
-                        import traceback
-                        tb = "".join(traceback.format_exception(type(exc), exc, exc.__traceback__))
-                        logger.debug(f"WS error traceback from {client_ip}:\n{tb}")
 
         finally:
             logger.info(f"Client disconnected: {client_ip}")

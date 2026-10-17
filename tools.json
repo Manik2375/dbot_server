@@ -1,0 +1,85 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "navigate_to",
+      "description": "Send the robot to a named location on campus (e.g., ECL 5, Drobotics Lab, Library, Cafeteria, VC Office, Administration).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The destination or room name to navigate to"
+          }
+        },
+        "required": ["location"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "navigate_and_deliver",
+      "description": "Navigate to a named location and announce an item delivery on arrival.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The destination location or room name"
+          },
+          "item": {
+            "type": "string",
+            "description": "The item or package being delivered"
+          }
+        },
+        "required": ["location", "item"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "move_distance",
+      "description": "Move the robot a specific distance in meters. Positive = forward, negative = backward.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "meters": {
+            "type": "number",
+            "description": "Distance in meters to move (positive = forward, negative = backward)"
+          }
+        },
+        "required": ["meters"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "rotate",
+      "description": "Rotate the robot by degrees in place. Positive = counterclockwise (left), negative = clockwise (right).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "degrees": {
+            "type": "number",
+            "description": "Angle in degrees to rotate (positive = counterclockwise / left, negative = clockwise / right)"
+          }
+        },
+        "required": ["degrees"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "stop",
+      "description": "Cancel all robot motion immediately and brake in place.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  }
+]

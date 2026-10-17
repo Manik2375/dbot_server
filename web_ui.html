@@ -425,7 +425,19 @@
         }
 
         function handleServerMessage(msg) {
-            if (msg.type === 'stt_result') {
+            if (msg.type === 'tool_call') {
+                if (msg.transcript) {
+                    addMessage('user', msg.transcript);
+                }
+                const tc = msg.tool_call || {};
+                const toolCard = `<div style="background: rgba(0,242,254,0.12); border: 1px solid rgba(0,242,254,0.4); padding: 8px 12px; border-radius: 8px; margin-bottom: 8px; font-family: monospace; font-size: 0.85rem; color: #00f2fe;">🤖 <b>TOOL CALL:</b> ${tc.name || 'tool'}(${JSON.stringify(tc.args || {})})</div>`;
+                addMessage('robot', `${toolCard}${msg.text}`);
+            } else if (msg.type === 'speak') {
+                if (msg.transcript) {
+                    addMessage('user', msg.transcript);
+                }
+                addMessage('robot', msg.text);
+            } else if (msg.type === 'stt_result') {
                 if (msg.transcript) {
                     addMessage('user', msg.transcript);
                     document.getElementById('metric-stt').innerText = `${msg.latency_ms} ms`;

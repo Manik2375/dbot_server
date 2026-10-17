@@ -22,7 +22,8 @@ High-performance, low-latency Speech-to-Speech (S2S) voice server designed for t
 ```
 
 > [!TIP]
-> **STT Engine Selection (`whisper.cpp` vs. `faster-whisper`)**: For a detailed technical comparison of why `whisper.cpp` was selected over `faster-whisper` on the Jetson AGX Thor (native SM 11.0 Blackwell architecture, ~570 MB VRAM footprint, and ~230 ms latency), see [WHISPER_COMPARISON.md](WHISPER_COMPARISON.md).
+> - **End-to-End Pipeline Specification**: For the complete wire protocol, binary audio framing layout, and tool-calling JSON contracts, see [PIPELINE_ARCHITECTURE.md](PIPELINE_ARCHITECTURE.md).
+> - **STT Engine Selection (`whisper.cpp` vs. `faster-whisper`)**: For a technical comparison of why `whisper.cpp` was selected on Jetson AGX Thor, see [WHISPER_COMPARISON.md](WHISPER_COMPARISON.md).
 
 ---
 
@@ -179,6 +180,8 @@ python3 drobot_client.py --server ws://10.42.0.1:8765/ws --interactive
 ├── drobot_client.py           # CLI test client & Jetson Orin Nano robot client
 ├── web_ui.html                # Interactive browser test bench & diagnostic console
 ├── requirements.txt           # Python dependencies for the voice pipeline
+├── tools.json                 # Available robot tool definitions for Ollama tool calling
+├── PIPELINE_ARCHITECTURE.md   # Detailed wire protocol, binary framing & tool contract specification
 ├── WHISPER_COMPARISON.md      # Technical comparison: whisper.cpp vs. faster-whisper on Thor
 ├── .gitignore                 # Excludes models, venv, caches, logs, and build files
 ├── clean_research.txt         # Clean structured facts about JUIT Waknaghat
