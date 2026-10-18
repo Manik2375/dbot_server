@@ -40,6 +40,14 @@ Admissions & Fees:
 - Defense ward rebate: 30% to 35%.
 Campus Amenities:
 - FSSAI 'Eat Right Campus' certified messes, dispensary with 24/7 medical support, gym, sports grounds, laundry, on-campus bank/ATM.
+
+D-Bot Robot Hardware & Specifications:
+- Name: D-Bot (autonomous service and delivery robot on wheels at JUIT Waknaghat).
+- Main Onboard Compute / Brain: NVIDIA Jetson Orin Nano Super Dev Kit (running ROS 2, audio capture/playback, motor control).
+- Depth Camera / Vision: Intel RealSense D435i depth camera (RGB video + active stereo IR depth + integrated IMU).
+- 2D LiDAR / Scanner: Slamtec RPLiDAR A1 M8 (360-degree laser range scanner for SLAM mapping and obstacle avoidance).
+- Locomotion / Chassis: Omnidirectional wheels (holonomic chassis capable of forward/backward motion, sideways strafing, diagonal movement, and 360-degree rotation in place).
+- Development Lab: Drobotics Lab / e-Yantra Lab in ECL 5 (Department of ECE, JUIT Waknaghat).
 """
 
 class KnowledgeEngine:
@@ -52,6 +60,25 @@ class KnowledgeEngine:
     def _load_and_chunk(self):
         # 1. Base structured knowledge chunks
         base_sections = [
+            {
+                "id": "dbot_hardware",
+                "title": "D-Bot Robot Identity, Hardware Specifications, Sensors, and Chassis",
+                "keywords": [
+                    "dbot", "d-bot", "robot", "hardware", "spec", "specs", "specifications",
+                    "orin", "nano", "super", "dev kit", "jetson", "compute", "processor", "brain",
+                    "camera", "depth camera", "d435i", "intel", "realsense", "lidar", "rplidar",
+                    "a1", "m8", "laser", "sensor", "sensors", "wheel", "wheels", "omnidirectional",
+                    "omni", "mecanum", "holonomic", "strafe", "movement", "chassis", "built", "components"
+                ],
+                "content": (
+                    "D-Bot Robot Hardware Specifications & Architecture: "
+                    "- Main Onboard Compute: NVIDIA Jetson Orin Nano Super Dev Kit, which handles local sensor acquisition, motor control, and real-time audio communication. "
+                    "- Vision & Depth Perception: Intel RealSense D435i depth camera providing high-resolution RGB video, active stereo infrared depth sensing, and an integrated IMU. "
+                    "- Laser Range Scanner (LiDAR): Slamtec RPLiDAR A1 M8 360-degree 2D laser range scanner (up to 12-meter range, 8000 samples/sec) used for SLAM mapping, localization, and obstacle avoidance. "
+                    "- Drive & Locomotion: Omnidirectional wheels (holonomic drive), enabling D-Bot to move forward, backward, strafe directly sideways left or right, slide diagonally, and spin 360 degrees in place. "
+                    "- Research & Development: Built and programmed at Drobotics Lab / e-Yantra Lab in ECL 5, Department of Electronics and Communication Engineering (ECE), JUIT Waknaghat."
+                )
+            },
             {
                 "id": "overview",
                 "title": "University Overview, Accreditation, and Campus Location",

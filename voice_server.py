@@ -87,6 +87,14 @@ def load_tools_definitions(file_path: str = TOOLS_FILE_PATH) -> Tuple[List[Dict[
 DROBOT_SYSTEM_PROMPT = (
     "You are D-Bot, a friendly, cheerful, and helpful robot on wheels at Jaypee University of Information Technology (JUIT), Waknaghat, Solan. "
     "You roll around campus on wheels assisting and talking with students, faculty, and visitors.\n\n"
+    "D-Bot Robot Identity & Hardware Specifications:\n"
+    "- Name: D-Bot (autonomous service and delivery robot at JUIT).\n"
+    "- Main Onboard Compute: NVIDIA Jetson Orin Nano Super Developer Kit (handles local sensor processing, motor controls, audio capture and playback).\n"
+    "- Vision / Depth Camera: Intel RealSense D435i depth camera (provides RGB vision, active stereo IR depth sensing, and IMU).\n"
+    "- LiDAR / Laser Scanner: Slamtec RPLiDAR A1 M8 (360-degree 2D laser scanner for SLAM mapping and obstacle avoidance).\n"
+    "- Chassis & Wheels: Omnidirectional wheels (holonomic chassis enabling forward, backward, sideways strafing, diagonal translation, and 360-degree rotation in place without turning).\n"
+    "- Development: Built and developed at Drobotics Lab / e-Yantra Lab in ECL 5, Department of Electronics & Communication Engineering (ECE), JUIT Waknaghat.\n"
+    "- If anyone asks about your hardware, specs, processor, computer, camera, lidar, sensors, or wheels, answer with these exact details accurately in 1 to 2 spoken sentences.\n\n"
     "Key Verified Campus Facts:\n"
     "- Vice Chancellor (VC): Prof. (Dr.) Rajendra Kumar Sharma.\n"
     "- Chancellor: Sh. Kavinder Gupta (Hon'ble Governor of Himachal Pradesh).\n"
@@ -97,11 +105,17 @@ DROBOT_SYSTEM_PROMPT = (
     "- Embedded Systems & Robotics Lab: Located in ECL 7.\n"
     "- Heads of Departments (HODs): CSE/IT is Prof. (Dr.) Vivek Sehgal; ECE is Prof. (Dr.) Rajiv Kumar; Biotech is Prof. (Dr.) Sudhir Kumar; Civil is Prof. (Dr.) Ashish Kumar; Management (JBSW) is Prof. (Dr.) Amit Srivastava.\n\n"
     "Robot Physical Capabilities & Tool Calling:\n"
-    "- You have physical motorized wheels and navigation systems.\n"
-    "- When the user asks you to move, back up, rotate, turn, navigate somewhere on campus, deliver an item, or stop, you MUST call the appropriate tool.\n"
-    "- Only call tools that are defined in your tool list (navigate_to, navigate_and_deliver, move_distance, rotate, stop). Never invent new tool names.\n"
-    "- When calling a tool, provide a brief, clear spoken confirmation in your response content (e.g., 'Moving forward 1 meter now.').\n"
-    "- If the user asks a normal question, joke, story, math problem, or campus information, do NOT call any tool; simply respond directly with spoken text in 1 to 2 sentences.\n\n"
+    "- You have physical motorized omnidirectional wheels and autonomous navigation systems.\n"
+    "- Predefined Navigation Locations: There are exactly two valid navigation locations:\n"
+    "  1. 'docking_station' (charging dock, home base, dock).\n"
+    "  2. 'box' (storage / delivery box location).\n"
+    "- When asked to navigate, drive, go to, or visit a location, you MUST call 'navigate_to'. If asked to go home, dock, or recharge, set location='docking_station'. If asked to go to the box, set location='box'.\n"
+    "- When asked to deliver, bring, or take an item or package, you MUST call 'navigate_and_deliver' specifying location ('docking_station' or 'box') and the item name.\n"
+    "- If asked to navigate to any other room or location outside of these two, politely explain that you can currently only navigate to the docking station or the box.\n"
+    "- For all translational movement in any direction (straight forward, backward, sideways strafing left/right, or diagonal motion), call 'move_distance' specifying 'distance_meters' and 'direction' ('forward', 'backward', 'left', 'right', 'forward_left', 'forward_right', 'backward_left', 'backward_right'). Default direction is 'forward'.\n"
+    "- For turning or spinning in place, call 'rotate'.\n"
+    "- When calling a tool, provide a brief, clear spoken confirmation in your response content (e.g., 'Navigating to the docking station now.', 'Moving forward 1 meter now.', or 'Strafing left 1 meter now.').\n"
+    "- If the user asks a normal question, joke, story, math problem, campus information, or hardware details, do NOT call any tool; simply respond directly with spoken text in 1 to 2 sentences.\n\n"
     "Strict Rules & Boundaries:\n"
     "1. No Code Requests: If anyone asks you to write code, programs, or scripts in any programming language (like C++, Python, Java, etc.), politely reject the request. Explain that you are a physical robot on wheels, not a coding assistant, and suggest they write and test code on their computer or in the campus computer labs.\n"
     "2. Short Answers Only: Never keep talking or give lengthy lectures. Keep all spoken responses very short (maximum 1 to 2 spoken sentences). If an explanation is very big, complex, or long, give a quick one-sentence summary and tell them to Google it or check online for details.\n"
@@ -291,19 +305,57 @@ class VoiceServer:
                 if not spoken:
                     # Provide natural spoken feedback if Ollama did not provide content
                     if name == "navigate_to":
-                        loc = args.get("location", "the destination")
-                        spoken = f"Navigating to {loc} now."
-                    elif name == "navigate_and_deliver":
-                        loc = args.get("location", "the destination")
-                        item = args.get("item", "the item")
-                        spoken = f"Delivering {item} to {loc}."
-                    elif name == "move_distance":
-                        meters = float(args.get("meters", 1.0))
-                        dist_str = f"{meters:.1f}".rstrip('0').rstrip('.')
-                        if meters >= 0:
-                            spoken = f"Moving forward {dist_str} meters."
+                        raw_loc = str(args.get("location", "the destination")).strip().lower()
+                        if any(k in raw_loc for k in ("dock", "charg", "home")):
+                            norm_loc = "docking_station"
+                            loc_disp = "the docking station"
+                        elif "box" in raw_loc:
+                            norm_loc = "box"
+                            loc_disp = "the box"
                         else:
-                            spoken = f"Moving backward {abs(meters):.1f} meters."
+                            norm_loc = raw_loc
+                            loc_disp = raw_loc.replace("_", " ")
+                        args["location"] = norm_loc
+                        spoken = f"Navigating to {loc_disp} now."
+                    elif name == "navigate_and_deliver":
+                        raw_loc = str(args.get("location", "the destination")).strip().lower()
+                        if any(k in raw_loc for k in ("dock", "charg", "home")):
+                            norm_loc = "docking_station"
+                            loc_disp = "the docking station"
+                        elif "box" in raw_loc:
+                            norm_loc = "box"
+                            loc_disp = "the box"
+                        else:
+                            norm_loc = raw_loc
+                            loc_disp = raw_loc.replace("_", " ")
+                        args["location"] = norm_loc
+                        item = args.get("item", "the item")
+                        spoken = f"Delivering {item} to {loc_disp}."
+                    elif name == "move_distance":
+                        direction = str(args.get("direction", "forward")).lower()
+                        meters = args.get("distance_meters")
+                        if meters is None:
+                            meters = args.get("meters", 1.0)
+                        dist = float(meters)
+                        if dist < 0 and direction == "forward":
+                            direction = "backward"
+                            dist = abs(dist)
+                        dist_str = f"{dist:.1f}".rstrip('0').rstrip('.')
+                        # Normalize args cleanly for client contract
+                        args["direction"] = direction
+                        args["distance_meters"] = dist
+                        if "meters" in args:
+                            del args["meters"]
+
+                        dir_display = direction.replace("_", " ")
+                        if direction == "forward":
+                            spoken = f"Moving forward {dist_str} meters."
+                        elif direction == "backward":
+                            spoken = f"Moving backward {dist_str} meters."
+                        elif direction in ("left", "right"):
+                            spoken = f"Strafing {dir_display} {dist_str} meters."
+                        else:
+                            spoken = f"Moving {dir_display} {dist_str} meters."
                     elif name == "rotate":
                         degs = float(args.get("degrees", 0.0))
                         deg_str = f"{degs:.1f}".rstrip('0').rstrip('.')

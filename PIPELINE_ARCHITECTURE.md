@@ -32,6 +32,15 @@ sequenceDiagram
     Note over Robot: Execute motor motion & play audio on speakers
 ```
 
+### D-Bot Robot Hardware Specifications (Client):
+| Component | Hardware Specification | Function / Role |
+| :--- | :--- | :--- |
+| **Onboard Compute** | **NVIDIA Jetson Orin Nano Super Dev Kit** | Edge compute for motor control, ROS 2, sensor acquisition, and audio client |
+| **Depth Camera** | **Intel RealSense D435i** | Active stereo IR depth sensing, RGB visual SLAM, and integrated 6-DoF IMU |
+| **LiDAR Sensor** | **Slamtec RPLiDAR A1 M8** | 360-degree 2D laser scanner (12m range) for obstacle avoidance & 2D mapping |
+| **Chassis / Wheels** | **Omnidirectional Wheels (Holonomic)** | 3-4 wheel omni drive: forward, backward, sideways strafing, and diagonal motion |
+| **Development Lab** | **ECL 5 (Drobotics / e-Yantra Lab)** | Department of ECE, Jaypee University of Information Technology (JUIT) |
+
 ---
 
 ## 2. The Binary Audio Framing Protocol (Orin $\rightarrow$ Thor)
@@ -129,10 +138,10 @@ def unpack_audio(data: bytes):
   - `num_predict`: `160` (keeps responses to 1–2 spoken sentences).
 
 #### Available Tools in `tools.json`:
-1. `move_distance(meters: float)`: Positive = forward, negative = backward.
+1. `move_distance(distance_meters: float, direction?: string)`: Move the robot a specific distance in meters in any direction using its omnidirectional wheels without rotating heading (`forward`, `backward`, `left`/strafe, `right`/strafe, `forward_left`, `forward_right`, `backward_left`, `backward_right`). Default direction is `forward`.
 2. `rotate(degrees: float)`: Positive = counterclockwise (left), negative = clockwise (right).
-3. `navigate_to(location: string)`: Sends robot to named campus waypoint.
-4. `navigate_and_deliver(location: string, item: string)`: Navigates and delivers an item.
+3. `navigate_to(location: "docking_station" | "box")`: Sends robot to named waypoint ('docking_station' or 'box').
+4. `navigate_and_deliver(location: "docking_station" | "box", item: string)`: Navigates to destination and delivers item.
 5. `stop()`: Emergency halt / cancels all motion immediately.
 
 ---

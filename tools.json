@@ -3,13 +3,14 @@
     "type": "function",
     "function": {
       "name": "navigate_to",
-      "description": "Send the robot to a named location on campus (e.g., ECL 5, Drobotics Lab, Library, Cafeteria, VC Office, Administration).",
+      "description": "Send the robot to a predefined navigation waypoint: 'docking_station' (charging dock / home base) or 'box'.",
       "parameters": {
         "type": "object",
         "properties": {
           "location": {
             "type": "string",
-            "description": "The destination or room name to navigate to"
+            "enum": ["docking_station", "box"],
+            "description": "The destination: 'docking_station' or 'box'"
           }
         },
         "required": ["location"]
@@ -20,13 +21,14 @@
     "type": "function",
     "function": {
       "name": "navigate_and_deliver",
-      "description": "Navigate to a named location and announce an item delivery on arrival.",
+      "description": "Navigate to a destination ('docking_station' or 'box') and announce an item delivery on arrival.",
       "parameters": {
         "type": "object",
         "properties": {
           "location": {
             "type": "string",
-            "description": "The destination location or room name"
+            "enum": ["docking_station", "box"],
+            "description": "The destination location: 'docking_station' or 'box'"
           },
           "item": {
             "type": "string",
@@ -41,16 +43,30 @@
     "type": "function",
     "function": {
       "name": "move_distance",
-      "description": "Move the robot a specific distance in meters. Positive = forward, negative = backward.",
+      "description": "Move the robot a specific distance in meters in any direction using its omnidirectional wheels without rotating heading (forward, backward, left/strafe, right/strafe, diagonal).",
       "parameters": {
         "type": "object",
         "properties": {
-          "meters": {
+          "direction": {
+            "type": "string",
+            "enum": [
+              "forward",
+              "backward",
+              "left",
+              "right",
+              "forward_left",
+              "forward_right",
+              "backward_left",
+              "backward_right"
+            ],
+            "description": "Direction to move holonomically: 'forward', 'backward', 'left' (strafe left), 'right' (strafe right), 'forward_left', 'forward_right', 'backward_left', 'backward_right'. Default is 'forward'."
+          },
+          "distance_meters": {
             "type": "number",
-            "description": "Distance in meters to move (positive = forward, negative = backward)"
+            "description": "Distance to travel in meters (positive number, e.g. 0.5, 1.0, 2.5)"
           }
         },
-        "required": ["meters"]
+        "required": ["distance_meters"]
       }
     }
   },
