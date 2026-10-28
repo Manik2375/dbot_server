@@ -251,9 +251,10 @@ class VoiceServer:
             "think": False,
             "options": {
                 "think": False,
-                "temperature": 0.5,
+                "num_ctx": 4096,
+                "temperature": 0.3,
                 "top_p": 0.9,
-                "num_predict": 160
+                "num_predict": 64
             }
         }
 
@@ -386,8 +387,100 @@ class VoiceServer:
             "text": spoken
         }
 
+    def fast_motion_parse(self, text: str) -> Optional[Dict[str, Any]]:
+        """Ultra-fast regex-based intent parser for instant motion commands (< 0.1ms)"""
+        t = text.strip().lower()
+        t_clean = re.sub(r"[^\w\s\.]", "", t).strip()
+
+        # 1. STOP
+        if re.fullmatch(r"(?:please\s+)?(?:stop|halt|freeze|pause|brake|emergency stop|cancel)(?:\s+(?:now|motion|moving|robot|all motion))?", t_clean):
+            return {"name": "stop", "args": {}, "spoken": "Stopping all robot motion immediately."}
+
+        # 2. NAVIGATE AND DELIVER
+        m_deliv = re.search(r"\b(?:deliver|take|bring|carry)\s+(?:this\s+|the\s+|a\s+|an\s+)?(.+?)\s+(?:to|at)\s+(?:the\s+)?(docking station|dock|charging station|box)\b", t_clean)
+        if m_deliv:
+            item = m_deliv.group(1).strip()
+            loc_raw = m_deliv.group(2).strip()
+            loc = "docking_station" if any(k in loc_raw for k in ("dock", "charg")) else "box"
+            loc_disp = "the docking station" if loc == "docking_station" else "the box"
+            return {
+                "name": "navigate_and_deliver",
+                "args": {"location": loc, "item": item},
+                "spoken": f"Delivering {item} to {loc_disp} now."
+            }
+
+        # 3. NAVIGATE TO
+        if re.search(r"\b(?:dock|docking station|charge|recharge|charging station|home|home base)\b", t_clean):
+            if re.search(r"\b(?:go|navigate|drive|return|head|proceed|travel)\b", t_clean) or t_clean in ("dock", "recharge", "go home"):
+                return {
+                    "name": "navigate_to",
+                    "args": {"location": "docking_station"},
+                    "spoken": "Navigating to the docking station now."
+                }
+
+        if re.search(r"\b(?:go|navigate|drive|head|proceed|travel)\s+(?:to\s+)?(?:the\s+)?box\b", t_clean):
+            return {
+                "name": "navigate_to",
+                "args": {"location": "box"},
+                "spoken": "Navigating to the box now."
+            }
+
+        # 4. ROTATION IN PLACE
+        if "turn around" in t_clean or "about face" in t_clean:
+            return {"name": "rotate", "args": {"degrees": 180.0}, "spoken": "Rotating 180 degrees."}
+
+        m_rot = re.search(r"\b(?:rotate|turn|spin)\s*(?:to\s+the\s+|to\s+)?(left|right|counterclockwise|clockwise)?\s*(?:by\s*)?(\d+(?:\.\d+)?)\s*(?:degrees?|deg)?\b", t_clean)
+        if m_rot:
+            dir_word = m_rot.group(1) or ""
+            val = float(m_rot.group(2))
+            degrees = -val if dir_word in ("right", "clockwise") else val
+            deg_str = f"{abs(degrees):.1f}".rstrip("0").rstrip(".")
+            side = "clockwise" if degrees < 0 else "counterclockwise"
+            return {
+                "name": "rotate",
+                "args": {"degrees": degrees},
+                "spoken": f"Rotating {deg_str} degrees {side}."
+            }
+        if re.fullmatch(r"(?:turn|rotate|spin)\s+(?:to\s+the\s+)?(left|right)\b", t_clean):
+            m_simple = re.search(r"(left|right)", t_clean)
+            degrees = -90.0 if m_simple.group(1) == "right" else 90.0
+            side = "clockwise" if degrees < 0 else "counterclockwise"
+            return {"name": "rotate", "args": {"degrees": degrees}, "spoken": f"Rotating 90 degrees {side}."}
+
+        # 5. MOVE DISTANCE
+        m_dist = re.search(r"\b(?:move|drive|go|strafe|slide|back up|back|step)\s+(?:sideways\s+(?:to\s+the\s+|to\s+)?)?(forward|backward|back|reverse|left|right|forward left|forward right|backward left|backward right)?\s*(?:by\s*)?(\d+(?:\.\d+)?)\s*(meters?|m|cm|centimeters?|feet|foot)?\b", t_clean)
+        if m_dist:
+            val = float(m_dist.group(2))
+            unit = m_dist.group(3) or "meters"
+            if unit in ("cm", "centimeter", "centimeters"):
+                dist_m = val / 100.0
+            elif unit in ("feet", "foot"):
+                dist_m = val * 0.3048
+            else:
+                dist_m = val
+
+            dir_raw = m_dist.group(1) or ("backward" if "back" in t_clean or "reverse" in t_clean else "forward")
+            dir_norm = dir_raw.replace(" ", "_")
+            if dir_norm in ("back", "reverse"):
+                dir_norm = "backward"
+
+            dist_str = f"{dist_m:.1f}".rstrip("0").rstrip(".")
+            dir_disp = dir_norm.replace("_", " ")
+            if dir_norm in ("left", "right"):
+                spoken = f"Strafing {dir_disp} {dist_str} meters."
+            else:
+                spoken = f"Moving {dir_disp} {dist_str} meters."
+
+            return {
+                "name": "move_distance",
+                "args": {"distance_meters": dist_m, "direction": dir_norm},
+                "spoken": spoken
+            }
+
+        return None
+
     async def process_utterance(self, ws: web.WebSocketResponse, audio_data: bytes, session_id: str = ""):
-        """Processes an audio utterance through STT -> RAG -> Ollama Chat (tools) -> Piper TTS"""
+        """Processes an audio utterance through STT -> Fast Router / RAG + LLM -> Piper TTS"""
         total_t0 = time.time()
         logger.info(f"Incoming audio utterance: {len(audio_data)} bytes (session: '{session_id}')")
 
@@ -402,23 +495,37 @@ class VoiceServer:
 
         logger.info(f"✓ STT Result ({stt_ms:.1f}ms): '{transcript}'")
 
-        # 2. Knowledge RAG
-        rag_t0 = time.time()
-        context = self.rag.format_context(transcript)
-        rag_ms = (time.time() - rag_t0) * 1000.0
-        logger.info(f"✓ RAG Context retrieved in {rag_ms:.1f}ms (matches: {bool(context.strip())})")
+        # 2. Fast Motion Intent Check (< 0.1ms)
+        fast_action = self.fast_motion_parse(transcript)
+        if fast_action:
+            contract_data = {
+                "transcript": transcript,
+                "type": "tool_call",
+                "text": fast_action["spoken"],
+                "tool_call": {
+                    "name": fast_action["name"],
+                    "args": fast_action["args"]
+                }
+            }
+            logger.info(f"⚡ FAST Intent Match (<0.1ms): [{contract_data['type']}] text: '{contract_data['text']}' | tool: {contract_data['tool_call']}")
+        else:
+            # 3. Knowledge RAG
+            rag_t0 = time.time()
+            context = self.rag.format_context(transcript)
+            rag_ms = (time.time() - rag_t0) * 1000.0
+            logger.info(f"✓ RAG Context retrieved in {rag_ms:.1f}ms (matches: {bool(context.strip())})")
 
-        # 3. Ollama Chat with Tools
-        llm_t0 = time.time()
-        chat_res = await self.chat_with_tools(transcript, context)
-        llm_ms = (time.time() - llm_t0) * 1000.0
+            # 4. Ollama Chat with Tools
+            llm_t0 = time.time()
+            chat_res = await self.chat_with_tools(transcript, context)
+            llm_ms = (time.time() - llm_t0) * 1000.0
 
-        # 4. Normalize to exact JSON contract
-        contract_data = self.normalize_response(transcript, chat_res)
-        logger.info(f"✓ LLM ({llm_ms:.1f}ms) -> [{contract_data['type']}] text: '{contract_data['text']}'" +
-                    (f" | tool: {contract_data.get('tool_call')}" if contract_data['type'] == 'tool_call' else ""))
+            # 5. Normalize to exact JSON contract
+            contract_data = self.normalize_response(transcript, chat_res)
+            logger.info(f"✓ LLM ({llm_ms:.1f}ms) -> [{contract_data['type']}] text: '{contract_data['text']}'" +
+                        (f" | tool: {contract_data.get('tool_call')}" if contract_data['type'] == 'tool_call' else ""))
 
-        # 5. Synthesize speech using Piper (WAV bytes)
+        # 6. Synthesize speech using Piper (WAV bytes)
         tts_t0 = time.time()
         loop = asyncio.get_running_loop()
         wav_bytes = await loop.run_in_executor(None, self.tts.synthesize_sentence_wav, contract_data["text"])
@@ -427,19 +534,32 @@ class VoiceServer:
 
         logger.info(f"✓ TTS ({tts_ms:.1f}ms, {len(wav_bytes)} audio bytes). Turn complete in {total_ms:.1f}ms")
 
-        # 6. Send back: first the JSON message, then the synthesized audio as binary, in that order
+        # 7. Send back: first the JSON message, then the synthesized audio as binary, in that order
         if not ws.closed:
             await ws.send_str(json.dumps(contract_data))
             await ws.send_bytes(wav_bytes)
 
     async def process_text_query(self, ws: web.WebSocketResponse, query: str):
-        """Processes a direct text query through RAG -> Ollama Chat (tools) -> Piper TTS"""
+        """Processes a direct text query through Fast Router / RAG + LLM -> Piper TTS"""
         total_t0 = time.time()
         logger.info(f"Incoming text query: '{query}'")
 
-        context = self.rag.format_context(query)
-        chat_res = await self.chat_with_tools(query, context)
-        contract_data = self.normalize_response(query, chat_res)
+        fast_action = self.fast_motion_parse(query)
+        if fast_action:
+            contract_data = {
+                "transcript": query,
+                "type": "tool_call",
+                "text": fast_action["spoken"],
+                "tool_call": {
+                    "name": fast_action["name"],
+                    "args": fast_action["args"]
+                }
+            }
+            logger.info(f"⚡ FAST Intent Match (<0.1ms): [{contract_data['type']}] text: '{contract_data['text']}' | tool: {contract_data['tool_call']}")
+        else:
+            context = self.rag.format_context(query)
+            chat_res = await self.chat_with_tools(query, context)
+            contract_data = self.normalize_response(query, chat_res)
 
         loop = asyncio.get_running_loop()
         wav_bytes = await loop.run_in_executor(None, self.tts.synthesize_sentence_wav, contract_data["text"])
